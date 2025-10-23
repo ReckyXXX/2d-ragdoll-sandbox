@@ -518,18 +518,6 @@ PrefabInstance:
       value: Ragdoll
       objectReference: {fileID: 0}
     - target: {fileID: 3646066592652750539, guid: 24cb6f330be72d049a2fc41bc5fc5287, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.66412
-      objectReference: {fileID: 0}
-    - target: {fileID: 3646066592652750539, guid: 24cb6f330be72d049a2fc41bc5fc5287, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.66412
-      objectReference: {fileID: 0}
-    - target: {fileID: 3646066592652750539, guid: 24cb6f330be72d049a2fc41bc5fc5287, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.66412
-      objectReference: {fileID: 0}
-    - target: {fileID: 3646066592652750539, guid: 24cb6f330be72d049a2fc41bc5fc5287, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}

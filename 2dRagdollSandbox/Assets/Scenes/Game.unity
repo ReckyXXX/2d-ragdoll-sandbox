@@ -266,6 +266,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InputSystem
   _pointerPressActionReference: {fileID: -363961061262656121, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   _pointerPositionActionReference: {fileID: -1405239053334532237, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+  dragLayers:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -758,7 +761,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.02, y: -4.46, z: 0}
-  m_LocalScale: {x: 15.50567, y: 1.0583231, z: 1}
+  m_LocalScale: {x: 54.56, y: 1.0583231, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}

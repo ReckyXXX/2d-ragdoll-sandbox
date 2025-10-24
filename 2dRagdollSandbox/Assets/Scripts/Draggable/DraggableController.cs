@@ -8,38 +8,37 @@ namespace Game.Draggable
     {
         [SerializeField] private InputActionReference _pointerPressActionReference;
         [SerializeField] private InputActionReference _pointerPositionActionReference;
-        [SerializeField] private LayerMask dragLayers = -1;
+        [SerializeField] private LayerMask _dragLayers = -1;
 
-        private Camera _camera;
-        private Vector2 _pointerScreenPosition;
-        private WaitForFixedUpdate _waitForFixedUpdate = new ();
+        private UnityEngine.Camera _camera;
+        private WaitForFixedUpdate _waitForFixedUpdate = new();
 
         private bool _dragging;
 
-        private Vector2 PointerWorldPosition => _camera.ScreenToWorldPoint(new Vector3(_pointerScreenPosition.x, _pointerScreenPosition.y, -_camera.transform.position.z));
+        private Vector2 PointerWorldPosition 
+        {
+            get 
+            {
+                Vector2 pointerScreenPosition = _pointerPositionActionReference.action.ReadValue<Vector2>();
+                return _camera.ScreenToWorldPoint(new Vector3(pointerScreenPosition.x, pointerScreenPosition.y, -_camera.transform.position.z));
+            } 
+        }
 
         void Awake()
         {
-            _camera = Camera.main;
+            _camera = UnityEngine.Camera.main;
         }
 
         private void OnEnable()
         {
             _pointerPressActionReference.action.performed += PointerPressPerformed;
             _pointerPressActionReference.action.canceled += PointerPressCanceled;
-            _pointerPositionActionReference.action.performed += PointerPositionChanged;
         }
 
         private void OnDisable()
         {
             _pointerPressActionReference.action.performed -= PointerPressPerformed;
             _pointerPressActionReference.action.canceled -= PointerPressCanceled;
-            _pointerPositionActionReference.action.performed -= PointerPositionChanged;
-        }
-
-        private void PointerPositionChanged(InputAction.CallbackContext context)
-        {
-            _pointerScreenPosition = context.ReadValue<Vector2>();
         }
 
         private void PointerPressCanceled(InputAction.CallbackContext context)
@@ -49,7 +48,7 @@ namespace Game.Draggable
 
         private void PointerPressPerformed(InputAction.CallbackContext context)
         {
-            RaycastHit2D hit2D = Physics2D.Raycast(PointerWorldPosition, Vector2.zero, Mathf.Infinity, dragLayers);
+            RaycastHit2D hit2D = Physics2D.Raycast(PointerWorldPosition, Vector2.zero, Mathf.Infinity, _dragLayers);
             if (hit2D.collider != null && hit2D.collider.TryGetComponent(out IDraggable draggable))
             {
                 StartCoroutine(DragProcess(draggable));

@@ -266,7 +266,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Game.Draggable.DraggableController
   _pointerPressActionReference: {fileID: -363961061262656121, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   _pointerPositionActionReference: {fileID: -1405239053334532237, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
-  dragLayers:
+  _dragLayers:
     serializedVersion: 2
     m_Bits: 64
 --- !u!1 &519420028

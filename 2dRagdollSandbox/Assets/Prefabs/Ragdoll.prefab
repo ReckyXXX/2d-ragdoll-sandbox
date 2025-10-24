@@ -477,7 +477,7 @@ GameObject:
   - component: {fileID: 1764326640575145539}
   - component: {fileID: 7672242063863408290}
   - component: {fileID: 489719217964754156}
-  - component: {fileID: 9032767401268139776}
+  - component: {fileID: 4334917597043382375}
   m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
@@ -631,7 +631,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.87, y: 2.65}
   m_EdgeRadius: 0
---- !u!114 &9032767401268139776
+--- !u!114 &4334917597043382375
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -640,9 +640,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 500106050250966713}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bff0e29e426fcca4389168e5b60315a3, type: 3}
+  m_Script: {fileID: 11500000, guid: 563bb9d360ad9a44193cb850262ddb07, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DragPart
+  m_EditorClassIdentifier: Assembly-CSharp::DraggablePart
+  _dragForce: 300
+  _dragDistanceThreshold: 0.01
+  _maxVelocity: 10
 --- !u!1 &1060135299969019095
 GameObject:
   m_ObjectHideFlags: 0

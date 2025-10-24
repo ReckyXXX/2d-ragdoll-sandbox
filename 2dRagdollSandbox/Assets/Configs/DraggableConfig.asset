@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 980f2b1a9008baa49a9d009debea89f4, type: 3}
+  m_Script: {fileID: 11500000, guid: 0aee414c87edeb943888f46e7cf35d60, type: 3}
   m_Name: DraggableConfig
-  m_EditorClassIdentifier: Assembly-CSharp::DraggableConfig
+  m_EditorClassIdentifier: Assembly-CSharp::Game.Draggable.DraggableConfig
   dragForce: 300
   dragDistanceThreshold: 0.01
   maxVelocity: 10
